@@ -1,0 +1,16 @@
+.custom-select {
+  width: 355px;
+  height: 85px;
+  left: 495px;
+  background: #ffffff;
+  border: 2px solid #62e9b8;
+  box-sizing: border-box;
+}
+
+.arrow-down {
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #62e9b8;
+}

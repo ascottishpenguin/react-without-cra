@@ -8,7 +8,10 @@ module.exports = {
     resolve: {
         extensions: [".tsx", ".ts", ".js"],
     },
-    devServer: { contentBase: path.join(__dirname, "src") },
+    devServer: { 
+        contentBase: path.join(__dirname, "src"),
+        historyApiFallback: true 
+    },
     module: {
         rules: [
             {
@@ -26,9 +29,13 @@ module.exports = {
                 use: ["style-loader", "css-loader"],
             },
             {
-                test: /\.(jpg|jpeg|png|gif|mp3|svg)$/,
+                test: /\.(jpg|jpeg|png|gif|mp3|svg|)$/,
                 use: ["file-loader"],
             },
+            {
+                test: /\.(woff|woff2|eot|ttf|otf)$/i,
+                type: 'asset/resource',
+              },
         ],
     },
     plugins: [
